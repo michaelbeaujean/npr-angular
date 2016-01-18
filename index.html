@@ -7,9 +7,12 @@
   </head>
   <body>
     <div ng-controller="PlayerController">
-      <button ng-click="play()" class="btn" ng-show="!playing">Play</button>
-      <button ng-click="stop()" class="btn" ng-show="playing">Stop</button>
-      Playing audio: <b>{{ playing }}</b>
+      <ul id="programs-list">
+        <li ng-repeat="program in programs">
+          <span npr-link play="play(program)" ng-model="program">         
+          </span>
+        </li>
+      </ul>
     </div>
     <div>
     </div>

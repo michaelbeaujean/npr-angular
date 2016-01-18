@@ -6,9 +6,12 @@
     <script src="js/main.js" type="text/javascript"></script>
   </head>
   <body>
+    <div ng-controller="PlayerController">
+      <button ng-click="play()" class="btn" ng-show="!playing">Play</button>
+      <button ng-click="stop()" class="btn" ng-show="playing">Stop</button>
+      Playing audio: <b>{{ playing }}</b>
+    </div>
     <div>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <h1>Hello, {{ yourName }}!</h1>
     </div>
   </body>
 </html>
